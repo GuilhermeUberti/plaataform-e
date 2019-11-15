@@ -1,7 +1,7 @@
 'use strict'
 
 const repository = require('../repositories/categoria-repository');
-const _repo = repository();
+const _repo = new repository();
 
 function categoriaController() {
 

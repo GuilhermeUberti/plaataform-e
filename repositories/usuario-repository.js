@@ -37,7 +37,7 @@ class usuarioRepository {
     }
 
     async getById(id) {
-        return await this._base._model.findById(_id, 'nome email _id foto');
+        return await this._base._model.findById(id, 'nome email _id foto');
     }
 
     async delete(id) {

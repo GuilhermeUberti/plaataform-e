@@ -21,7 +21,8 @@ usuarioController.prototype.post = async (req, res) => {
 
     let usuarioEmailExistente = await _repo.emailExistente(req.body.email);
     if (usuarioEmailExistente) {
-        _validationContract.isTrue((usuarioEmailExistente != undefined), `${req.body.email} já cadastrado no banco`);
+        _validationContract.isTrue((usuarioEmailExistente != undefined),
+            `${req.body.email} já cadastrado no banco`);
     }
     req.body.senha = md5(req.body.senha);   //criptografa senha do usuário
 

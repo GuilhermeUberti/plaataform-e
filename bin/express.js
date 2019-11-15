@@ -17,6 +17,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 //Configurando a conexão com banco de dados
 mongoose.connect(variables.Database.connection, {useUnifiedTopology: true, useNewUrlParser: true});
+mongoose.set('useCreateIndex', true);
 
 //Configurando as rotas
 app.use('/api/categoria', categoriaRouter);
